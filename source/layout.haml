@@ -1,0 +1,23 @@
+!!!5
+%html{:lang => "es"}
+  %head
+
+    %title Hashgrid Generator
+
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "Cristian Ferrari | @energettico", :name => "author"}
+
+    -# StyleSheets
+    = stylesheet_link_tag "application"
+
+    -# Javascript
+    = javascript_include_tag "vendor/modernizr-2.5.3"
+
+    = javascript_include_tag "plugins"
+    = javascript_include_tag "script"
+
+  %body
+
+    = yield_content(:principal)

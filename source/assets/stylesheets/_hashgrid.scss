@@ -1,0 +1,51 @@
+$default-grid-id:                grid;
+$default-column-width:           140px;
+$default-column-count:           6;
+$default-gutter-width:           20px;
+$default-vertical-rhythm:        24px;
+$default-grid-align:             center;
+$default-vertical-guide-color:   darkturquoise;
+$default-horizontal-guide-color: darkgray;
+
+@include hashgrid {
+  @include setgrid(
+    $griddNumber:    1
+  //$columnWidth:    $default-column-width,
+  //$columnCount:    $default-column-count,
+  //$gutterWidth:    $default-gutter-width,
+  //$verticalRhythm: $default-vertical-rhythm,
+  //$gridAlign:      $default-grid-align,
+  //$hGuideColor:    false,
+  //$vGuideColor:    false
+  );
+  @include setgrid(
+    $griddNumber:    2,
+  //$columnWidth:    $default-column-width,
+    $columnCount:    4,
+  //$gutterWidth:    $default-gutter-width,
+  //$verticalRhythm: $default-vertical-rhythm,
+  //$gridAlign:      $default-grid-align,
+  //$hGuideColor:    false,
+    $vGuideColor:    red
+  );
+  @include setgrid(
+    $griddNumber:    3,
+    $columnWidth:    50px,
+    $columnCount:    12,
+    $gutterWidth:    20px,
+    $verticalRhythm: 30px,
+    $gridAlign:      center
+  //$hGuideColor:    false,
+  //$vGuideColor:    red
+  );
+  @include setgrid(
+    $griddNumber:    4,
+    $columnWidth:    50px 50px 50px 50px 150px 150px 150px 150px 50px 50px 50px 50px,
+    $columnCount:    12,
+    $gutterWidth:    20px,
+    $verticalRhythm: 30px,
+    $gridAlign:      center
+  //$hGuideColor:    false,
+  //$vGuideColor:    red
+  );
+}
