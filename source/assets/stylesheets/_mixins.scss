@@ -7,10 +7,7 @@ $default-grid-align:             center !default;
 $default-vertical-guide-color:   darkturquoise !default;
 $default-horizontal-guide-color: darkgray !default;
 
-@mixin hashgrid(
-  $gridId:         $default-grid-id,
-  $verticalRhythm: $default-vertical-rhythm
-) {
+@mixin hashgrid($gridId: $default-grid-id) {
 
   // Grid
   ##{$gridId} {
@@ -50,7 +47,7 @@ $default-horizontal-guide-color: darkgray !default;
     // visible height = height + borders + margins + padding
     .horiz{
       /* 20px line height */
-      height: $verticalRhythm - 1px;
+      height: $default-vertical-rhythm - 1px;
       border-bottom: 1px dotted $default-horizontal-guide-color;
       margin: 0;
       padding: 0;
